@@ -1,0 +1,41 @@
+<style>
+  h1{
+    text-align: center;
+  }
+  body{
+    font-family: Arial;
+  }
+  table{
+    margin: auto;
+    border-collapse: collapse;
+  }
+  th{
+    padding:8px;
+    border: 1px solid rgb(0,0,0,0.8);
+  }
+  td{
+    padding:8px;
+    text-align: center;
+    border: 1px solid rgb(0,0,0,0.5);
+  }
+</style>
+
+<h1>Student Details</h1>
+<table class = "table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @students.each do |student| %>
+      <td><%= student.name %></td>
+      <td><%= student.email %></td>
+      <td><%= student.phone_number %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>

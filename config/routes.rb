@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'students/send_mail'
+
   get 'employees/index'
 
   get 'users/index'

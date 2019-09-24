@@ -1,0 +1,22 @@
+<p>The following details <b>has successfully been sent</b> to the designated email address:</p>
+<h1>Student Details</h1>
+<table class = "table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @students.each do |student| %>
+    <tr> 
+      <td><%= student.name %></td>
+      <td><%= student.email %></td>
+      <td><%= student.phone_number %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to "Back", root_path, class: "btn btn-primary" %></p>
